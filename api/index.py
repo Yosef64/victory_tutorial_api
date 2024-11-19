@@ -20,3 +20,6 @@ async def agentRegister(request:Request):
         return Response({{"message":"ok"}},status_code=200)
     except Exception as e:
         return Response({"message":e},status_code=500)
+@app.get("/")
+async def index(request:Request):
+    return Response({"message":"ok"},status_code=200)
