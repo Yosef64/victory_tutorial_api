@@ -5,7 +5,7 @@ from fastapi.middleware.trustedhost import TrustedHostMiddleware
 
 app = FastAPI()
 origins = [
-    "https://victory-contest.vercel.app/",
+    "https://victory-contest.vercel.app",
 ]
 
 app.add_middleware(
