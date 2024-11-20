@@ -11,13 +11,11 @@ origins = [
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
+    allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
-app.add_middleware(
-    TrustedHostMiddleware,
-    allowed_hosts=["victory-contest.vercel.app",]
-)
+
 @app.post("/register")
 async def agentRegister(request:Request):
     
