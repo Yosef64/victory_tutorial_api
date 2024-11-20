@@ -5,6 +5,7 @@ import firebase_admin
 from firebase_admin import credentials,firestore
 
 firebase_key_base64 = os.getenv("FIREBASE_KEY_BASE64")
+print(os.environ)
 if firebase_key_base64:
     firebase_key_json = json.loads(base64.b64decode(firebase_key_base64).decode('utf-8'))
     cred = credentials.Certificate(firebase_key_json)
