@@ -19,8 +19,7 @@ async def agentRegister(request:Request):
         registerAgent(data,referal)
         return {"message":"ok"}
     except Exception as e:
-        return Response({"message":e},status_code=500)
-    return {"message":"ok"}
+        return {"message": str(e), "status_code": 500}
 @app.get("/")
 async def index(request:Request):
     return {"message":"ok"}
