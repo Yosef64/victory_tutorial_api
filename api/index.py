@@ -17,7 +17,7 @@ async def agentRegister(request:Request):
     referal = getSession(data["teleid"])
     try:
         registerAgent(data,referal)
-        return Response({{"message":"ok"}},status_code=200)
+        return {"message":"ok"}
     except Exception as e:
         return Response({"message":e},status_code=500)
     return {"message":"ok"}
