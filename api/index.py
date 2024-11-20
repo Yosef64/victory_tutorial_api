@@ -2,9 +2,7 @@ from fastapi import FastAPI, Request, Response
 from .dbActions import getSession,registerAgent
 from fastapi.middleware.cors import CORSMiddleware
 origins = [
-    "http://localhost:8000",
     "https://victory-contest.vercel.app/",
-    "http://localhost:5173/"
 ]
 app = FastAPI()
 app.add_middleware(
