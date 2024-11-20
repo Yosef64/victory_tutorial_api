@@ -23,7 +23,8 @@ def addSession(tele_id,referal):
 def getSession(tele_id):
     ref = session_ref.document(tele_id).get()
     if ref.exists:
-        return ref.get()["referal"]
+        data = ref.to_dict()
+        return data["referal"]
     return ""
     
     
