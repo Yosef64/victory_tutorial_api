@@ -26,5 +26,16 @@ def getSession(tele_id):
         data = ref.to_dict()
         return data["referal"]
     return ""
+
+def getUser(tele_id):
+    agent_info = userInfo_ref.get().to_dict()
+    ref = ""
+    for key in agent_info:
+        if agent_info[key]["teleid"] == tele_id:
+            ref = key
+            break
+    return ref
+    
+
     
     
