@@ -26,7 +26,7 @@ async def agentRegister(request:Request):
         return {"message":"ok"}
     except Exception as e:
         return {"message": str(e), "status_code": 500}
-@app.get("/check_user")
+@app.post("/check_user")
 async def check_user(request:Request):
     data = await request.json()
     try:
