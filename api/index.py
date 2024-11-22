@@ -41,7 +41,7 @@ async def check_user(request:Request):
 @app.post("/sendMessage")
 async def send_message(request:Request):
     data = await request.json()
-    CHAT_ID ,text = data["chat_id"] , "You are already regitered!"
+    CHAT_ID ,text = data["chat_id"] , "You are already registered!"
     try:
         url = f"https://api.telegram.org/bot{TOKEN}/sendMessage"
         payload = {"chat_id": CHAT_ID, "text": text}
